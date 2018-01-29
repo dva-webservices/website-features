@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DVA Taxonomies feature.
+ */
+
+include_once 'dva_taxonomies.features.inc';

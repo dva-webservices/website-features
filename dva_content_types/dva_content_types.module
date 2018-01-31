@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DVA content types feature.
+ */
+
+include_once 'dva_content_types.features.inc';

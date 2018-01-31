@@ -2083,6 +2083,265 @@ function dva_taxonomies_uuid_features_default_terms() {
     ),
   );
   $terms[] = array(
+    'name' => 'News',
+    'description' => '',
+    'format' => 'raw',
+    'weight' => 0,
+    'uuid' => 'beb480a2-d9fe-4c8d-b1aa-9b53f301571d',
+    'vocabulary_machine_name' => 'news_article_type',
+    'metatags' => array(
+      'und' => array(
+        'AGLSTERMS.act' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.aggregationLevel' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.availability' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.case' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.category' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.dateLicenced' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.documentType' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.function' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.isBasisFor' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.isBasedOn' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.jurisdiction' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.mandate' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.protectiveMarking' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.regulation' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'AGLSTERMS.serviceType' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'robots' => array(
+          'value' => array(
+            'index' => 0,
+            'follow' => 0,
+            'noindex' => 0,
+            'nofollow' => 0,
+            'noarchive' => 0,
+            'nosnippet' => 0,
+            'noodp' => 0,
+            'noydir' => 0,
+            'noimageindex' => 0,
+            'notranslate' => 0,
+          ),
+        ),
+        'dcterms.title' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.creator' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.subject' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.description' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.publisher' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.contributor' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.date' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.type' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.format' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.identifier' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.source' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.language' => array(
+          'item' => array(
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.relation' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.coverage' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+        'dcterms.rights' => array(
+          'item' => array(
+            'value' => '',
+            'scheme' => '',
+            'lang' => '',
+            'dir' => 0,
+          ),
+        ),
+      ),
+    ),
+    'path' => array(
+      'pathauto' => 1,
+    ),
+  );
+  $terms[] = array(
     'name' => 'Men\'s Health Peer Education',
     'description' => '',
     'format' => 'raw',

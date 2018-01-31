@@ -24,6 +24,7 @@ features[uuid_term][] = 84a6f13f-8525-466c-ad34-1f3daf4bcf66
 features[uuid_term][] = aa65af34-49b3-45fd-a674-781bfb13e95f
 features[uuid_term][] = b34ef4a4-1480-444d-8b76-03bbd67c5233
 features[uuid_term][] = ba91a94f-9a14-4623-a708-69aca646379a
+features[uuid_term][] = beb480a2-d9fe-4c8d-b1aa-9b53f301571d
 features[uuid_term][] = c312d53c-7690-4fbf-95d7-a5fb72dd5e23
 features[uuid_term][] = f7b49e02-f18d-4b17-b8cc-fd08f69d69a6
 features[variable][] = pathauto_taxonomy_term_dva_services_pattern

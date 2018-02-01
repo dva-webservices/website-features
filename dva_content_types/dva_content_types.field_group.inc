@@ -21,7 +21,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'After you have applied',
-    'weight' => '14',
+    'weight' => '10',
     'children' => array(
       0 => 'field_after_you_have_applied',
     ),
@@ -30,7 +30,7 @@ function dva_content_types_field_group_info() {
       'label' => 'After you have applied',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-after-applying field-group-html-element',
+        'classes' => '',
         'element' => 'div',
         'show_label' => '1',
         'label_element' => 'h2',
@@ -79,7 +79,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'Change in circumstances',
-    'weight' => '15',
+    'weight' => '11',
     'children' => array(
       0 => 'field_change_in_circumstances',
     ),
@@ -93,9 +93,7 @@ function dva_content_types_field_group_info() {
         'show_label' => '1',
         'label_element' => 'h2',
         'attributes' => '',
-        'required_fields' => 1,
       ),
-      'formatter' => '',
     ),
   );
   $field_groups['group_change_circumstances|node|service|default'] = $field_group;
@@ -139,7 +137,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_right_column';
   $field_group->data = array(
     'label' => 'Eligibility',
-    'weight' => '22',
+    'weight' => '8',
     'children' => array(
       0 => 'field_eligibility',
     ),
@@ -153,9 +151,7 @@ function dva_content_types_field_group_info() {
         'show_label' => '1',
         'label_element' => 'h2',
         'attributes' => '',
-        'required_fields' => 1,
       ),
-      'formatter' => '',
     ),
   );
   $field_groups['group_eligibility|node|service|default'] = $field_group;
@@ -226,7 +222,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'How to apply',
-    'weight' => '12',
+    'weight' => '8',
     'children' => array(
       0 => 'field_how_to_apply',
     ),
@@ -293,7 +289,6 @@ function dva_content_types_field_group_info() {
       2 => 'field_change_in_circumstances',
       3 => 'field_application_links',
       4 => 'field_start_application',
-      5 => 'group_start_application',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -376,7 +371,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '2',
+    'weight' => '7',
     'children' => array(
       0 => 'group_eligibility',
     ),
@@ -386,7 +381,7 @@ function dva_content_types_field_group_info() {
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-right-column field-group-htab col-md-4',
-        'wrapper' => 'article',
+        'wrapper' => 'section',
       ),
     ),
   );
@@ -458,7 +453,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'Start application',
-    'weight' => '13',
+    'weight' => '9',
     'children' => array(
       0 => 'field_application_links',
       1 => 'field_start_application',

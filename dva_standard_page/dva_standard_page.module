@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DVA Standard Page feature.
+ */
+
+include_once 'dva_standard_page.features.inc';

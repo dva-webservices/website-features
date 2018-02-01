@@ -1,14 +1,42 @@
 <?php
 /**
  * @file
- * dva_content_types.field_group.inc
+ * dva_service.field_group.inc
  */
 
 /**
  * Implements hook_field_group_info().
  */
-function dva_content_types_field_group_info() {
+function dva_service_field_group_info() {
   $field_groups = array();
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_admin|node|service|form';
+  $field_group->group_name = 'group_admin';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'service';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_service_tabs';
+  $field_group->data = array(
+    'label' => 'Admin',
+    'weight' => '52',
+    'children' => array(
+      0 => 'field_business_contact',
+      1 => 'field_author_notes',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-admin field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_admin|node|service|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -21,7 +49,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'After you have applied',
-    'weight' => '10',
+    'weight' => '14',
     'children' => array(
       0 => 'field_after_you_have_applied',
     ),
@@ -30,7 +58,7 @@ function dva_content_types_field_group_info() {
       'label' => 'After you have applied',
       'instance_settings' => array(
         'id' => '',
-        'classes' => '',
+        'classes' => 'group-after-applying field-group-html-element',
         'element' => 'div',
         'show_label' => '1',
         'label_element' => 'h2',
@@ -43,34 +71,6 @@ function dva_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_attachments|node|page|form';
-  $field_group->group_name = 'group_attachments';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'page';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tabs';
-  $field_group->data = array(
-    'label' => 'Attachments',
-    'weight' => '11',
-    'children' => array(
-      0 => 'field_file',
-      1 => 'field_image',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-attachments field-group-htab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_attachments|node|page|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_change_circumstances|node|service|default';
   $field_group->group_name = 'group_change_circumstances';
   $field_group->entity_type = 'node';
@@ -79,7 +79,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'Change in circumstances',
-    'weight' => '11',
+    'weight' => '15',
     'children' => array(
       0 => 'field_change_in_circumstances',
     ),
@@ -93,38 +93,12 @@ function dva_content_types_field_group_info() {
         'show_label' => '1',
         'label_element' => 'h2',
         'attributes' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $field_groups['group_change_circumstances|node|service|default'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_content|node|page|form';
-  $field_group->group_name = 'group_content';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'page';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tabs';
-  $field_group->data = array(
-    'label' => 'Content',
-    'weight' => '10',
-    'children' => array(
-      0 => 'body',
-      1 => 'title',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-content field-group-htab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_content|node|page|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -137,7 +111,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_right_column';
   $field_group->data = array(
     'label' => 'Eligibility',
-    'weight' => '8',
+    'weight' => '22',
     'children' => array(
       0 => 'field_eligibility',
     ),
@@ -151,7 +125,9 @@ function dva_content_types_field_group_info() {
         'show_label' => '1',
         'label_element' => 'h2',
         'attributes' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $field_groups['group_eligibility|node|service|default'] = $field_group;
@@ -197,7 +173,11 @@ function dva_content_types_field_group_info() {
     'weight' => '48',
     'children' => array(
       0 => 'body',
-      1 => 'title',
+      1 => 'field_service_type',
+      2 => 'field_page_overview',
+      3 => 'field_category',
+      4 => 'field_factsheet_references',
+      5 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -222,7 +202,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'How to apply',
-    'weight' => '8',
+    'weight' => '12',
     'children' => array(
       0 => 'field_how_to_apply',
     ),
@@ -305,64 +285,6 @@ function dva_content_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_overview|node|location|form';
-  $field_group->group_name = 'group_overview';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'location';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tabs';
-  $field_group->data = array(
-    'label' => 'Overview',
-    'weight' => '43',
-    'children' => array(
-      0 => 'body',
-      1 => 'locations',
-      2 => 'title',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-overview field-group-htab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_overview|node|location|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_overview|taxonomy_term|user_groups|form';
-  $field_group->group_name = 'group_overview';
-  $field_group->entity_type = 'taxonomy_term';
-  $field_group->bundle = 'user_groups';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_tabs';
-  $field_group->data = array(
-    'label' => 'Overview',
-    'weight' => '6',
-    'children' => array(
-      0 => 'field_content_requirements',
-      1 => 'name',
-      2 => 'description',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-overview field-group-htab',
-        'required_fields' => 1,
-      ),
-    ),
-  );
-  $field_groups['group_overview|taxonomy_term|user_groups|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
   $field_group->identifier = 'group_right_column|node|service|default';
   $field_group->group_name = 'group_right_column';
   $field_group->entity_type = 'node';
@@ -371,7 +293,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '7',
+    'weight' => '2',
     'children' => array(
       0 => 'group_eligibility',
     ),
@@ -381,7 +303,7 @@ function dva_content_types_field_group_info() {
       'instance_settings' => array(
         'id' => '',
         'classes' => 'group-right-column field-group-htab col-md-4',
-        'wrapper' => 'section',
+        'wrapper' => 'article',
       ),
     ),
   );
@@ -398,7 +320,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_service_tabs';
   $field_group->data = array(
     'label' => 'Right Column',
-    'weight' => '50',
+    'weight' => '51',
     'children' => array(
       0 => 'field_eligibility',
     ),
@@ -430,6 +352,7 @@ function dva_content_types_field_group_info() {
       0 => 'group_header',
       1 => 'group_left_column',
       2 => 'group_right_column',
+      3 => 'group_admin',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -453,7 +376,7 @@ function dva_content_types_field_group_info() {
   $field_group->parent_name = 'group_left_column';
   $field_group->data = array(
     'label' => 'Start application',
-    'weight' => '9',
+    'weight' => '13',
     'children' => array(
       0 => 'field_application_links',
       1 => 'field_start_application',
@@ -473,102 +396,18 @@ function dva_content_types_field_group_info() {
   );
   $field_groups['group_start_application|node|service|default'] = $field_group;
 
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_tabs|node|location|form';
-  $field_group->group_name = 'group_tabs';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'location';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Tabs',
-    'weight' => '0',
-    'children' => array(
-      0 => 'group_overview',
-      1 => 'group_meta',
-    ),
-    'format_type' => 'htabs',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-tabs field-group-htabs',
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_tabs|node|location|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_tabs|node|page|form';
-  $field_group->group_name = 'group_tabs';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'page';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Tabs',
-    'weight' => '0',
-    'children' => array(
-      0 => 'group_content',
-      1 => 'group_attachments',
-    ),
-    'format_type' => 'htabs',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-tabs field-group-htabs',
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_tabs|node|page|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_tabs|taxonomy_term|user_groups|form';
-  $field_group->group_name = 'group_tabs';
-  $field_group->entity_type = 'taxonomy_term';
-  $field_group->bundle = 'user_groups';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Tabs',
-    'weight' => '5',
-    'children' => array(
-      0 => 'group_overview',
-      1 => 'group_meta',
-    ),
-    'format_type' => 'htabs',
-    'format_settings' => array(
-      'formatter' => '',
-      'instance_settings' => array(
-        'classes' => 'group-tabs field-group-htabs',
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_tabs|taxonomy_term|user_groups|form'] = $field_group;
-
   // Translatables
   // Included for use with string extractors like potx.
+  t('Admin');
   t('After you have applied');
-  t('Attachments');
   t('Change in circumstances');
-  t('Content');
   t('Eligibility');
   t('Header');
   t('How to apply');
   t('Left Column');
-  t('Overview');
   t('Right Column');
   t('Service Tabs');
   t('Start application');
-  t('Tabs');
 
   return $field_groups;
 }

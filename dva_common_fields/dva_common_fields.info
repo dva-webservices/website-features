@@ -1,0 +1,11 @@
+name = DVA Common Fields
+description = Common fields used in DVA content types.
+core = 7.x
+package = DVA Features
+version = 7.x-1.0-alpha1
+dependencies[] = features
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = field_author_notes
+features[field_base][] = field_business_contact
+features[field_base][] = field_page_overview

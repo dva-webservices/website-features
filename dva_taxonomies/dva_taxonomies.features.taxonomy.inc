@@ -9,6 +9,29 @@
  */
 function dva_taxonomies_taxonomy_default_vocabularies() {
   return array(
+    'aided_navigation' => array(
+      'name' => 'Aided Navigation',
+      'machine_name' => 'aided_navigation',
+      'description' => 'Aided Navigation for the home page',
+      'hierarchy' => 1,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'dva_services' => array(
       'name' => 'DVA Services',
       'machine_name' => 'dva_services',
@@ -55,10 +78,10 @@ function dva_taxonomies_taxonomy_default_vocabularies() {
         ),
       ),
     ),
-    'user_groups' => array(
-      'name' => 'User groups',
-      'machine_name' => 'user_groups',
-      'description' => '',
+    'page_categories' => array(
+      'name' => 'Page categories',
+      'machine_name' => 'page_categories',
+      'description' => 'A list of categories and related topics',
       'hierarchy' => 1,
       'module' => 'taxonomy',
       'weight' => 0,

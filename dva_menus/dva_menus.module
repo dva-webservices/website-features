@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the DVA menus feature.
- */
-
-include_once 'dva_menus.features.inc';

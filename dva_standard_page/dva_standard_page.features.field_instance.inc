@@ -98,6 +98,42 @@ function dva_standard_page_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-page-field_category'.
+  $field_instances['node-page-field_category'] = array(
+    'bundle' => 'page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_category',
+    'label' => 'Category',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'hs_taxonomy',
+      'settings' => array(),
+      'type' => 'taxonomy_hs',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-page-field_page_overview'.
   $field_instances['node-page-field_page_overview'] = array(
     'bundle' => 'page',
@@ -138,7 +174,7 @@ function dva_standard_page_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 14,
     ),
   );
 
@@ -146,6 +182,7 @@ function dva_standard_page_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Author\'s notes');
   t('Business contact');
+  t('Category');
   t('Page overview');
   t('Provide a short overview of the page, do not including any headings.');
 

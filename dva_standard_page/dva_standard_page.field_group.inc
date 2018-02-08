@@ -53,7 +53,8 @@ function dva_standard_page_field_group_info() {
     'children' => array(
       0 => 'body',
       1 => 'field_page_overview',
-      2 => 'title',
+      2 => 'field_category',
+      3 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(

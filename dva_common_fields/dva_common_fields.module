@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the DVA Common Fields feature.
  */
+
+include_once 'dva_common_fields.features.inc';

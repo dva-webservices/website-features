@@ -176,8 +176,7 @@ function dva_service_field_group_info() {
       1 => 'field_service_type',
       2 => 'field_page_overview',
       3 => 'field_category',
-      4 => 'field_factsheet_references',
-      5 => 'title',
+      4 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -320,7 +319,7 @@ function dva_service_field_group_info() {
   $field_group->parent_name = 'group_service_tabs';
   $field_group->data = array(
     'label' => 'Right Column',
-    'weight' => '51',
+    'weight' => '50',
     'children' => array(
       0 => 'field_eligibility',
     ),
@@ -353,6 +352,7 @@ function dva_service_field_group_info() {
       1 => 'group_left_column',
       2 => 'group_right_column',
       3 => 'group_admin',
+      4 => 'group_criteria',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(

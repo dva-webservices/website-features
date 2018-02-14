@@ -42,7 +42,7 @@ function dva_service_field_default_field_instances() {
     'label' => 'Body',
     'required' => 0,
     'settings' => array(
-      'display_summary' => 0,
+      'display_summary' => 1,
       'linkit' => array(
         'button_text' => 'Search',
         'enable' => 0,
@@ -464,6 +464,72 @@ function dva_service_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-service-field_eligibility_criteria'.
+  $field_instances['node-service-field_eligibility_criteria'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_eligibility_criteria',
+    'label' => 'Eligibility criteria',
+    'required' => 0,
+    'settings' => array(
+      'add_mode' => 'select',
+      'allowed_bundles' => array(
+        'entitlements' => 'entitlements',
+        'feature_link' => -1,
+        'footwear' => -1,
+        'funeral' => -1,
+        'mental_health' => -1,
+        'rent_assistance' => -1,
+        'seniors_health_care_card' => -1,
+        'travel' => -1,
+      ),
+      'bundle_weights' => array(
+        'entitlements' => 2,
+        'feature_link' => 3,
+        'footwear' => 4,
+        'funeral' => 5,
+        'mental_health' => 6,
+        'rent_assistance' => 7,
+        'seniors_health_care_card' => 8,
+        'travel' => 9,
+      ),
+      'default_edit_mode' => 'open',
+      'title' => 'Criterion',
+      'title_multiple' => 'Criteria',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paragraphs',
+      'settings' => array(),
+      'type' => 'paragraphs_embed',
+      'weight' => 56,
+    ),
+  );
+
   // Exported field_instance: 'node-service-field_how_to_apply'.
   $field_instances['node-service-field_how_to_apply'] = array(
     'bundle' => 'service',
@@ -662,6 +728,209 @@ function dva_service_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'paragraphs_item-entitlements-field_cause_of_death'.
+  $field_instances['paragraphs_item-entitlements-field_cause_of_death'] = array(
+    'bundle' => 'entitlements',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_cause_of_death',
+    'label' => 'Death related to service or medical condition',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-entitlements-field_circumstances'.
+  $field_instances['paragraphs_item-entitlements-field_circumstances'] = array(
+    'bundle' => 'entitlements',
+    'default_value' => array(
+      0 => array(
+        'value' => 'member_veteran',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 3,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_circumstances',
+    'label' => 'Circumstances',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'flatten_options' => 0,
+        'flatten_sort' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-entitlements-field_date_served'.
+  $field_instances['paragraphs_item-entitlements-field_date_served'] = array(
+    'bundle' => 'entitlements',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_date_served',
+    'label' => 'Date Served',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-entitlements-field_medical_conditions'.
+  $field_instances['paragraphs_item-entitlements-field_medical_conditions'] = array(
+    'bundle' => 'entitlements',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_medical_conditions',
+    'label' => 'Medical Conditions',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 37,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-entitlements-field_served_overseas'.
+  $field_instances['paragraphs_item-entitlements-field_served_overseas'] = array(
+    'bundle' => 'entitlements',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_served_overseas',
+    'label' => 'Served Overseas',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_buttons',
+      'weight' => 36,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('After you have applied');
@@ -671,9 +940,15 @@ function dva_service_field_default_field_instances() {
   t('Business contact');
   t('Category');
   t('Change in circumstances');
+  t('Circumstances');
+  t('Date Served');
+  t('Death related to service or medical condition');
   t('Eligibility');
+  t('Eligibility criteria');
   t('How to apply');
+  t('Medical Conditions');
   t('Page overview');
+  t('Served Overseas');
   t('Service Type');
   t('Start application');
 

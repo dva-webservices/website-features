@@ -284,6 +284,39 @@ function dva_service_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_question_1|paragraphs_item|entitlements|form';
+  $field_group->group_name = 'group_question_1';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'entitlements';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Initial Questions',
+    'weight' => '33',
+    'children' => array(
+      0 => 'field_date_served',
+      1 => 'field_medical_conditions',
+      2 => 'field_served_overseas',
+      3 => 'field_circumstances',
+      4 => 'field_cause_of_death',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Initial Questions',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-question-1 field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_question_1|paragraphs_item|entitlements|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_right_column|node|service|default';
   $field_group->group_name = 'group_right_column';
   $field_group->entity_type = 'node';
@@ -404,6 +437,7 @@ function dva_service_field_group_info() {
   t('Eligibility');
   t('Header');
   t('How to apply');
+  t('Initial Questions');
   t('Left Column');
   t('Right Column');
   t('Service Tabs');

@@ -17,6 +17,13 @@ function dva_service_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function dva_service_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function dva_service_node_info() {
@@ -31,5 +38,19 @@ function dva_service_node_info() {
     ),
   );
   drupal_alter('node_info', $items);
+  return $items;
+}
+
+/**
+ * Implements hook_paragraphs_info().
+ */
+function dva_service_paragraphs_info() {
+  $items = array(
+    'entitlements' => array(
+      'name' => 'Entitlements',
+      'bundle' => 'entitlements',
+      'locked' => '1',
+    ),
+  );
   return $items;
 }

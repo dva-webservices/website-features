@@ -103,6 +103,33 @@ function dva_service_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_criteria|node|service|form';
+  $field_group->group_name = 'group_criteria';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'service';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_service_tabs';
+  $field_group->data = array(
+    'label' => 'Criteria',
+    'weight' => '51',
+    'children' => array(
+      0 => 'field_eligibility_criteria',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-criteria field-group-htab',
+        'required_fields' => 1,
+      ),
+    ),
+  );
+  $field_groups['group_criteria|node|service|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_eligibility|node|service|default';
   $field_group->group_name = 'group_eligibility';
   $field_group->entity_type = 'node';
@@ -434,6 +461,7 @@ function dva_service_field_group_info() {
   t('Admin');
   t('After you have applied');
   t('Change in circumstances');
+  t('Criteria');
   t('Eligibility');
   t('Header');
   t('How to apply');

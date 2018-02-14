@@ -30,6 +30,7 @@ features[variable][] = node_preview_form
 features[variable][] = node_submitted_form
 features[variable][] = pathauto_node_form_pattern
 features[variable][] = xmlsitemap_settings_node_form
+features[views_view][] = dva_forms
 features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][file] = file

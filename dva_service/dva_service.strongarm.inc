@@ -47,19 +47,19 @@ function dva_service_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '3',
         ),
         'title' => array(
           'weight' => '50',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '2',
         ),
         'redirect' => array(
-          'weight' => '30',
+          'weight' => '1',
         ),
         'xmlsitemap' => array(
-          'weight' => '30',
+          'weight' => '0',
         ),
       ),
       'display' => array(),
@@ -104,7 +104,7 @@ function dva_service_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_service';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_service'] = $strongarm;
 
   $strongarm = new stdClass();

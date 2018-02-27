@@ -20,6 +20,20 @@ function dva_taxonomies_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_dva_forms_by_keyword__pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_dva_forms_by_keyword__pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_taxonomy_term_dva_forms_by_topic_pattern';
+  $strongarm->value = '';
+  $export['pathauto_taxonomy_term_dva_forms_by_topic_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_taxonomy_term_dva_services_pattern';
   $strongarm->value = '';
   $export['pathauto_taxonomy_term_dva_services_pattern'] = $strongarm;

@@ -39,7 +39,7 @@ function dva_service_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
+    'label' => 'Introduction',
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
@@ -460,7 +460,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 43,
+      'weight' => 48,
     ),
   );
 
@@ -478,7 +478,7 @@ function dva_service_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 27,
@@ -526,6 +526,57 @@ function dva_service_field_default_field_instances() {
       'module' => 'paragraphs',
       'settings' => array(),
       'type' => 'paragraphs_embed',
+      'weight' => 56,
+    ),
+  );
+
+  // Exported field_instance: 'node-service-field_further_information'.
+  $field_instances['node-service-field_further_information'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_further_information',
+    'label' => 'Further information',
+    'required' => 0,
+    'settings' => array(
+      'linkit' => array(
+        'button_text' => 'Search',
+        'enable' => 0,
+        'profile' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+      ),
+      'type' => 'text_textarea',
       'weight' => 56,
     ),
   );
@@ -628,6 +679,56 @@ function dva_service_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 54,
+    ),
+  );
+
+  // Exported field_instance: 'node-service-field_page_priority'.
+  $field_instances['node-service-field_page_priority'] = array(
+    'bundle' => 'service',
+    'default_value' => array(
+      0 => array(
+        'value' => 3,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_page_priority',
+    'label' => 'Page priority',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'apply_chosen' => '',
+        'flatten_options' => 0,
+        'flatten_sort' => 1,
+      ),
+      'type' => 'options_select',
+      'weight' => 53,
     ),
   );
 
@@ -936,7 +1037,6 @@ function dva_service_field_default_field_instances() {
   t('After you have applied');
   t('Application Links');
   t('Author\'s notes');
-  t('Body');
   t('Business contact');
   t('Category');
   t('Change in circumstances');
@@ -945,9 +1045,12 @@ function dva_service_field_default_field_instances() {
   t('Death related to service or medical condition');
   t('Eligibility');
   t('Eligibility criteria');
+  t('Further information');
   t('How to apply');
+  t('Introduction');
   t('Medical Conditions');
   t('Page overview');
+  t('Page priority');
   t('Served Overseas');
   t('Service Type');
   t('Start application');

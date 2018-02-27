@@ -111,7 +111,7 @@ function dva_service_field_group_info() {
   $field_group->parent_name = 'group_service_tabs';
   $field_group->data = array(
     'label' => 'Criteria',
-    'weight' => '51',
+    'weight' => '50',
     'children' => array(
       0 => 'field_eligibility_criteria',
     ),
@@ -196,23 +196,26 @@ function dva_service_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_service_tabs';
   $field_group->data = array(
-    'label' => 'Header',
+    'label' => 'Content',
     'weight' => '48',
     'children' => array(
       0 => 'body',
       1 => 'field_service_type',
       2 => 'field_page_overview',
       3 => 'field_category',
-      4 => 'title',
+      4 => 'field_further_information',
+      5 => 'field_page_priority',
+      6 => 'title',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Content',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-header field-group-htab',
         'required_fields' => 1,
+        'classes' => 'group-header field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_header|node|service|form'] = $field_group;
@@ -287,23 +290,25 @@ function dva_service_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_service_tabs';
   $field_group->data = array(
-    'label' => 'Left Column',
+    'label' => 'Application process',
     'weight' => '49',
     'children' => array(
       0 => 'field_how_to_apply',
-      1 => 'field_after_you_have_applied',
-      2 => 'field_change_in_circumstances',
-      3 => 'field_application_links',
-      4 => 'field_start_application',
+      1 => 'field_eligibility',
+      2 => 'field_after_you_have_applied',
+      3 => 'field_change_in_circumstances',
+      4 => 'field_application_links',
+      5 => 'field_start_application',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Application process',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-left-column field-group-htab',
         'required_fields' => 1,
+        'classes' => 'group-left-column field-group-htab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_left_column|node|service|form'] = $field_group;
@@ -376,13 +381,11 @@ function dva_service_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'service';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_service_tabs';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Right Column',
-    'weight' => '50',
-    'children' => array(
-      0 => 'field_eligibility',
-    ),
+    'weight' => '5',
+    'children' => array(),
     'format_type' => 'htab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -406,13 +409,12 @@ function dva_service_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Service Tabs',
-    'weight' => '43',
+    'weight' => '4',
     'children' => array(
       0 => 'group_header',
       1 => 'group_left_column',
-      2 => 'group_right_column',
-      3 => 'group_admin',
-      4 => 'group_criteria',
+      2 => 'group_admin',
+      3 => 'group_criteria',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -460,13 +462,13 @@ function dva_service_field_group_info() {
   // Included for use with string extractors like potx.
   t('Admin');
   t('After you have applied');
+  t('Application process');
   t('Change in circumstances');
+  t('Content');
   t('Criteria');
   t('Eligibility');
-  t('Header');
   t('How to apply');
   t('Initial Questions');
-  t('Left Column');
   t('Right Column');
   t('Service Tabs');
   t('Start application');

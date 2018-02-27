@@ -169,10 +169,14 @@ function dva_service_views_default_views() {
   $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
   $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
   $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
-    'page_categories' => 'page_categories',
+    'dva_services' => 'dva_services',
     'aided_navigation' => 0,
-    'dva_services' => 0,
+    'dva_forms_by_keyword_' => 0,
+    'dva_forms_by_topic' => 0,
+    'location_type' => 0,
     'news_article_type' => 0,
+    'page_categories' => 0,
+    'state' => 0,
     'tags' => 0,
     'user_groups' => 0,
   );
@@ -196,6 +200,9 @@ function dva_service_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '200';
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
   $handler->display->display_options['fields']['body']['settings'] = array(
@@ -207,31 +214,17 @@ function dva_service_views_default_views() {
   $handler->display->display_options['fields']['field_page_overview']['field'] = 'field_page_overview';
   $handler->display->display_options['fields']['field_page_overview']['label'] = '';
   $handler->display->display_options['fields']['field_page_overview']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_page_overview']['alter']['strip_tags'] = TRUE;
   $handler->display->display_options['fields']['field_page_overview']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_page_overview']['empty'] = '[body]';
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div>
-<strong>[title]</strong>
-[field_page_overview]
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<strong>[title]</strong>
+<p>[field_page_overview]<p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  /* Field: Content: Category */
-  $handler->display->display_options['fields']['field_category']['id'] = 'field_category';
-  $handler->display->display_options['fields']['field_category']['table'] = 'field_data_field_category';
-  $handler->display->display_options['fields']['field_category']['field'] = 'field_category';
-  $handler->display->display_options['fields']['field_category']['label'] = '';
-  $handler->display->display_options['fields']['field_category']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_category']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_category']['type'] = 'hs_taxonomy_term_reference_last_text_only';
-  $handler->display->display_options['fields']['field_category']['settings'] = array(
-    'view_mode' => 'default',
-    'links' => 0,
-    'use_content_language' => 1,
-  );
-  $handler->display->display_options['fields']['field_category']['delta_offset'] = '0';
   /* Field: Content: Service Type */
   $handler->display->display_options['fields']['field_service_type']['id'] = 'field_service_type';
   $handler->display->display_options['fields']['field_service_type']['table'] = 'field_data_field_service_type';
@@ -240,6 +233,11 @@ function dva_service_views_default_views() {
   $handler->display->display_options['fields']['field_service_type']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_service_type']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_service_type']['type'] = 'taxonomy_term_reference_plain';
+  /* Sort criterion: Content: Page priority (field_page_priority) */
+  $handler->display->display_options['sorts']['field_page_priority_value']['id'] = 'field_page_priority_value';
+  $handler->display->display_options['sorts']['field_page_priority_value']['table'] = 'field_data_field_page_priority';
+  $handler->display->display_options['sorts']['field_page_priority_value']['field'] = 'field_page_priority_value';
+  $handler->display->display_options['sorts']['field_page_priority_value']['order'] = 'DESC';
   /* Sort criterion: Taxonomy term: Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
@@ -249,11 +247,6 @@ function dva_service_views_default_views() {
   $handler->display->display_options['sorts']['title']['id'] = 'title';
   $handler->display->display_options['sorts']['title']['table'] = 'node';
   $handler->display->display_options['sorts']['title']['field'] = 'title';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Contextual filter: Paragraphs item: Paragraphs item ID */
   $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
   $handler->display->display_options['arguments']['item_id']['table'] = 'paragraphs_item';

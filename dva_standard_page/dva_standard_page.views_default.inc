@@ -306,13 +306,12 @@ function dva_standard_page_views_default_views() {
   $handler->display->display_options['filters']['parent']['relationship'] = 'parent';
   $handler->display->display_options['filters']['parent']['value']['value'] = '0';
   $handler->display->display_options['filters']['parent']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Term ID */
-  $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['relationship'] = 'parent';
-  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '40';
-  $handler->display->display_options['filters']['tid_raw']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['relationship'] = 'parent';
+  $handler->display->display_options['filters']['name']['value'] = 'Health & medical';
   $handler->display->display_options['block_description'] = 'Healthcare block';
 
   /* Display: Page */
@@ -515,13 +514,12 @@ function dva_standard_page_views_default_views() {
   $handler->display->display_options['filters']['parent']['relationship'] = 'parent';
   $handler->display->display_options['filters']['parent']['value']['value'] = '0';
   $handler->display->display_options['filters']['parent']['group'] = 1;
-  /* Filter criterion: Taxonomy term: Term ID */
-  $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
-  $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
-  $handler->display->display_options['filters']['tid_raw']['relationship'] = 'parent';
-  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '41';
-  $handler->display->display_options['filters']['tid_raw']['group'] = 1;
+  /* Filter criterion: Taxonomy term: Name */
+  $handler->display->display_options['filters']['name']['id'] = 'name';
+  $handler->display->display_options['filters']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['name']['field'] = 'name';
+  $handler->display->display_options['filters']['name']['relationship'] = 'parent';
+  $handler->display->display_options['filters']['name']['value'] = 'Support & services';
   $handler->display->display_options['block_description'] = 'Support block';
   $export['landing_page'] = $view;
 

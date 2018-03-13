@@ -23,15 +23,17 @@ function dva_form_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'DVA Forms';
+  $handler->display->display_options['css_class'] = 'container';
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'input_required';
   $handler->display->display_options['exposed_form']['options']['reset_button'] = TRUE;
   $handler->display->display_options['exposed_form']['options']['autosubmit_hide'] = FALSE;
-  $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Type in any filter and click on Apply to see results. Leave blank and click apply to view all';
+  $handler->display->display_options['exposed_form']['options']['text_input_required'] = '';
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'rich_text';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -41,6 +43,14 @@ function dva_form_views_default_views() {
     'title' => 'title',
     'field_form_number' => 'field_form_number',
   );
+  /* Header: Global: Text area */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
+  $handler->display->display_options['header']['area']['content'] = '<div class="page-overview full-width"><div class="container">Type in any filter and click on Apply to see results. Leave blank and click apply to view all.</div></div>
+<div class="section-divider full-width"><div class="arrow-down"></div></div>';
+  $handler->display->display_options['header']['area']['format'] = 'rich_text';
   /* Field: Content: Form Number */
   $handler->display->display_options['fields']['field_form_number']['id'] = 'field_form_number';
   $handler->display->display_options['fields']['field_form_number']['table'] = 'field_data_field_form_number';
@@ -163,7 +173,7 @@ function dva_form_views_default_views() {
     3 => 0,
   );
   $handler->display->display_options['filters']['field_topic_tid']['vocabulary'] = 'dva_forms_by_topic';
-  $handler->display->display_options['path'] = 'dva-forms';
+  $handler->display->display_options['path'] = 'forms';
   $export['dva_forms'] = $view;
 
   return $export;

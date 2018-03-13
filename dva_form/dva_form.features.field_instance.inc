@@ -28,7 +28,7 @@ function dva_form_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -73,13 +73,13 @@ function dva_form_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'file_entity',
         'settings' => array(
           'file_view_mode' => 'default',
         ),
         'type' => 'file_rendered',
-        'weight' => 2,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -90,11 +90,11 @@ function dva_form_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_dva_form',
-    'label' => 'DVA Form',
+    'label' => 'Downloads',
     'required' => 0,
     'settings' => array(
       'description_field' => 1,
-      'file_directory' => '',
+      'file_directory' => 'forms',
       'file_extensions' => 'txt pdf doc docx xls xlsx ppt pptx',
       'max_filesize' => '',
       'user_register_form' => FALSE,
@@ -128,7 +128,7 @@ function dva_form_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -175,11 +175,14 @@ function dva_form_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
+        'label' => 'hidden',
+        'module' => 'ds',
+        'settings' => array(
+          'taxonomy_term_link' => 1,
+          'taxonomy_term_separator' => ' ',
+        ),
+        'type' => 'ds_taxonomy_separator',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -218,11 +221,10 @@ function dva_form_field_default_field_instances() {
         'weight' => 0,
       ),
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'hidden',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
+        'type' => 'hidden',
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -250,7 +252,7 @@ function dva_form_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
-  t('DVA Form');
+  t('Downloads');
   t('Form Number');
   t('Keyword');
   t('Topic');

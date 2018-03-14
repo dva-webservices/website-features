@@ -16,6 +16,7 @@ features[taxonomy][] = aided_navigation
 features[taxonomy][] = dva_forms_by_keyword_
 features[taxonomy][] = dva_forms_by_topic
 features[taxonomy][] = dva_services
+features[taxonomy][] = factsheet_numbers
 features[taxonomy][] = news_article_type
 features[taxonomy][] = page_categories
 features[variable][] = pathauto_taxonomy_term_aided_navigation_pattern

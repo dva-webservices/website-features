@@ -222,7 +222,7 @@ function dva_service_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<strong>[title]</strong>
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<h3>[title]</h3>
 <p>[field_page_overview]<p>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: Service Type */
@@ -279,7 +279,7 @@ function dva_service_views_default_views() {
   $handler->display->display_options['filters']['field_circumstances_value']['group'] = 1;
   $handler->display->display_options['filters']['field_circumstances_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_circumstances_value']['expose']['operator_id'] = 'field_circumstances_value_op';
-  $handler->display->display_options['filters']['field_circumstances_value']['expose']['label'] = 'Circumstance';
+  $handler->display->display_options['filters']['field_circumstances_value']['expose']['label'] = 'Which of these best describes you?';
   $handler->display->display_options['filters']['field_circumstances_value']['expose']['operator'] = 'field_circumstances_value_op';
   $handler->display->display_options['filters']['field_circumstances_value']['expose']['identifier'] = 'field_circumstances_value';
   $handler->display->display_options['filters']['field_circumstances_value']['expose']['remember_roles'] = array(
@@ -291,18 +291,18 @@ function dva_service_views_default_views() {
     7 => 0,
     3 => 0,
   );
-  /* Filter criterion: Paragraphs item: Death related to service or medical condition (field_cause_of_death) */
-  $handler->display->display_options['filters']['field_cause_of_death_value']['id'] = 'field_cause_of_death_value';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['table'] = 'field_data_field_cause_of_death';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['field'] = 'field_cause_of_death_value';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['relationship'] = 'field_eligibility_criteria_value';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_cause_of_death_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_cause_of_death_value']['expose']['operator_id'] = 'field_cause_of_death_value_op';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['expose']['label'] = 'Death related to service/medical condition';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['expose']['operator'] = 'field_cause_of_death_value_op';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['expose']['identifier'] = 'field_cause_of_death_value';
-  $handler->display->display_options['filters']['field_cause_of_death_value']['expose']['remember_roles'] = array(
+  /* Filter criterion: Paragraphs item: Medical Conditions (field_medical_conditions) */
+  $handler->display->display_options['filters']['field_medical_conditions_value']['id'] = 'field_medical_conditions_value';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['table'] = 'field_data_field_medical_conditions';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['field'] = 'field_medical_conditions_value';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['relationship'] = 'field_eligibility_criteria_value';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['group'] = 1;
+  $handler->display->display_options['filters']['field_medical_conditions_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['operator_id'] = 'field_medical_conditions_value_op';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['label'] = 'Do you have medical conditions related to your service? ';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['operator'] = 'field_medical_conditions_value_op';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['identifier'] = 'field_medical_conditions_value';
+  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     4 => 0,
@@ -319,7 +319,7 @@ function dva_service_views_default_views() {
   $handler->display->display_options['filters']['field_date_served_value']['group'] = 1;
   $handler->display->display_options['filters']['field_date_served_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_date_served_value']['expose']['operator_id'] = 'field_date_served_value_op';
-  $handler->display->display_options['filters']['field_date_served_value']['expose']['label'] = 'Date Served';
+  $handler->display->display_options['filters']['field_date_served_value']['expose']['label'] = 'When did you or your family member serve? ';
   $handler->display->display_options['filters']['field_date_served_value']['expose']['operator'] = 'field_date_served_value_op';
   $handler->display->display_options['filters']['field_date_served_value']['expose']['identifier'] = 'field_date_served_value';
   $handler->display->display_options['filters']['field_date_served_value']['expose']['remember_roles'] = array(
@@ -339,30 +339,10 @@ function dva_service_views_default_views() {
   $handler->display->display_options['filters']['field_served_overseas_value']['group'] = 1;
   $handler->display->display_options['filters']['field_served_overseas_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_served_overseas_value']['expose']['operator_id'] = 'field_served_overseas_value_op';
-  $handler->display->display_options['filters']['field_served_overseas_value']['expose']['label'] = 'Served Overseas';
+  $handler->display->display_options['filters']['field_served_overseas_value']['expose']['label'] = 'Did you or your family member serve overseas? ';
   $handler->display->display_options['filters']['field_served_overseas_value']['expose']['operator'] = 'field_served_overseas_value_op';
   $handler->display->display_options['filters']['field_served_overseas_value']['expose']['identifier'] = 'field_served_overseas_value';
   $handler->display->display_options['filters']['field_served_overseas_value']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    4 => 0,
-    5 => 0,
-    6 => 0,
-    7 => 0,
-    3 => 0,
-  );
-  /* Filter criterion: Paragraphs item: Medical Conditions (field_medical_conditions) */
-  $handler->display->display_options['filters']['field_medical_conditions_value']['id'] = 'field_medical_conditions_value';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['table'] = 'field_data_field_medical_conditions';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['field'] = 'field_medical_conditions_value';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['relationship'] = 'field_eligibility_criteria_value';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['group'] = 1;
-  $handler->display->display_options['filters']['field_medical_conditions_value']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['operator_id'] = 'field_medical_conditions_value_op';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['label'] = 'Medical Conditions';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['operator'] = 'field_medical_conditions_value_op';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['identifier'] = 'field_medical_conditions_value';
-  $handler->display->display_options['filters']['field_medical_conditions_value']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     4 => 0,
@@ -501,7 +481,13 @@ function dva_service_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<div class="section-divider full-width"><div class="arrow-down"></div></div>';
+  $handler->display->display_options['header']['area']['content'] = '<div class="page-overview full-width">
+<div class="container">
+   <p>DVA provides a range of services to support your physical, financial and emotional wellbeing.  These services are available for current and ex-serving members as well as their families.
+  <p>Depending on when and where you (or your family member) served, you will be entitled to different types of support.  Use this form to find out the types of services DVA can provide for you.
+</div>
+</div>
+<div class="section-divider full-width"><div class="arrow-down"></div></div>';
   $handler->display->display_options['header']['area']['format'] = 'rich_text';
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['path'] = 'services';

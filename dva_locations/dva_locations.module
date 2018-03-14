@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DVA Locations feature.
+ */
+
+include_once 'dva_locations.features.inc';

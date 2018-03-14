@@ -15,7 +15,7 @@ function dva_service_field_default_field_instances() {
     'bundle' => 'service',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Provide a short introduction (2-3 sentences) for this Service.  The introduction should give an overview of what DVA clients can expect from the service, and how eligibility is determined',
     'display' => array(
       'compact' => array(
         'label' => 'above',
@@ -34,7 +34,7 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',
@@ -65,7 +65,7 @@ function dva_service_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 55,
+      'weight' => 56,
     ),
   );
 
@@ -95,13 +95,13 @@ function dva_service_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'node',
@@ -124,7 +124,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 45,
+      'weight' => 48,
     ),
   );
 
@@ -160,7 +160,7 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'node',
@@ -200,7 +200,7 @@ function dva_service_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 44,
+      'weight' => 47,
     ),
   );
 
@@ -221,13 +221,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'node',
@@ -271,13 +271,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -321,13 +321,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -345,7 +345,7 @@ function dva_service_field_default_field_instances() {
         'flatten_sort' => 1,
       ),
       'type' => 'taxonomy_hs',
-      'weight' => 52,
+      'weight' => 56,
     ),
   );
 
@@ -386,7 +386,7 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'node',
@@ -409,7 +409,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 46,
+      'weight' => 49,
     ),
   );
 
@@ -437,7 +437,7 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',
@@ -460,7 +460,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 48,
+      'weight' => 50,
     ),
   );
 
@@ -481,13 +481,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -530,6 +530,162 @@ function dva_service_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-service-field_email_link'.
+  $field_instances['node-service-field_email_link'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_email_link',
+    'label' => 'Email address',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 45,
+    ),
+  );
+
+  // Exported field_instance: 'node-service-field_factsheet_numbers'.
+  $field_instances['node-service-field_factsheet_numbers'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_factsheet_numbers',
+    'label' => 'Factsheet Numbers',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 57,
+    ),
+  );
+
+  // Exported field_instance: 'node-service-field_form_link'.
+  $field_instances['node-service-field_form_link'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'use_content_language' => 1,
+          'view_mode' => 'action_item',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_form_link',
+    'label' => 'Form link',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 46,
+    ),
+  );
+
   // Exported field_instance: 'node-service-field_further_information'.
   $field_instances['node-service-field_further_information'] = array(
     'bundle' => 'service',
@@ -548,13 +704,13 @@ function dva_service_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -577,7 +733,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 20,
       ),
       'type' => 'text_textarea',
-      'weight' => 56,
+      'weight' => 57,
     ),
   );
 
@@ -605,7 +761,7 @@ function dva_service_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',
@@ -632,6 +788,57 @@ function dva_service_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-service-field_main_number'.
+  $field_instances['node-service-field_main_number'] = array(
+    'bundle' => 'service',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'use_content_language' => 1,
+          'view_mode' => 'action_item',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_main_number',
+    'label' => 'Phone Number',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 44,
+    ),
+  );
+
   // Exported field_instance: 'node-service-field_page_overview'.
   $field_instances['node-service-field_page_overview'] = array(
     'bundle' => 'service',
@@ -649,12 +856,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'text_default',
         'weight' => 0,
       ),
     ),
@@ -678,7 +886,7 @@ function dva_service_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 54,
+      'weight' => 55,
     ),
   );
 
@@ -703,13 +911,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -728,7 +936,7 @@ function dva_service_field_default_field_instances() {
         'flatten_sort' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 53,
+      'weight' => 54,
     ),
   );
 
@@ -749,13 +957,13 @@ function dva_service_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -774,58 +982,7 @@ function dva_service_field_default_field_instances() {
         'flatten_sort' => 1,
       ),
       'type' => 'options_select',
-      'weight' => 51,
-    ),
-  );
-
-  // Exported field_instance: 'node-service-field_start_application'.
-  $field_instances['node-service-field_start_application'] = array(
-    'bundle' => 'service',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'compact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 14,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_start_application',
-    'label' => 'Start application',
-    'required' => 0,
-    'settings' => array(
-      'linkit' => array(
-        'button_text' => 'Search',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 43,
+      'weight' => 55,
     ),
   );
 
@@ -1045,15 +1202,19 @@ function dva_service_field_default_field_instances() {
   t('Death related to service or medical condition');
   t('Eligibility');
   t('Eligibility criteria');
+  t('Email address');
+  t('Factsheet Numbers');
+  t('Form link');
   t('Further information');
   t('How to apply');
   t('Introduction');
   t('Medical Conditions');
   t('Page overview');
   t('Page priority');
+  t('Phone Number');
+  t('Provide a short introduction (2-3 sentences) for this Service.  The introduction should give an overview of what DVA clients can expect from the service, and how eligibility is determined');
   t('Served Overseas');
   t('Service Type');
-  t('Start application');
 
   return $field_instances;
 }

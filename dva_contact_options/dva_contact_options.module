@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DVA contact options feature.
+ */
+
+include_once 'dva_contact_options.features.inc';

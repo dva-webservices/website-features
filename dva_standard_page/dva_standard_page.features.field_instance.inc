@@ -27,7 +27,7 @@ function dva_standard_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -83,7 +83,7 @@ function dva_standard_page_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'search_index' => array(
         'label' => 'above',
@@ -139,7 +139,7 @@ function dva_standard_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 8,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -187,7 +187,7 @@ function dva_standard_page_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 7,
       ),
       'search_index' => array(
         'label' => 'hidden',
@@ -222,7 +222,7 @@ function dva_standard_page_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 

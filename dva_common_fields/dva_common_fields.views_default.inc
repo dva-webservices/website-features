@@ -45,11 +45,7 @@ function dva_common_fields_views_default_views() {
   $handler->display->display_options['fields']['field_page_overview']['label'] = '';
   $handler->display->display_options['fields']['field_page_overview']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_page_overview']['alter']['text'] = '<div class="container">
-<div class="row">
-<div class="col-md-12">
 [field_page_overview]
-</div>
-</div>
 </div>';
   $handler->display->display_options['fields']['field_page_overview']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_page_overview']['element_wrapper_type'] = 'div';
